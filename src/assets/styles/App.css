@@ -42,40 +42,58 @@ p {
   }
 }
 
-.wave-gradient {
+.main-bg {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -4;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(60deg, #cea346 30%, #ff968f 70%);
   background-size: 200% 200%;
+  background: url("~@/assets/imgs/background/main_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.wave-gradient::before {
-  content: "";
+.bg-obj,
+.bg-pic {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 0 C 25 100 75 0 100 100 L 100 0 Z" /></svg>');
-  mask-size: cover;
-  animation: gradientWave 7s infinite;
 }
 
-.dark-veil {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -3;
+.bg-pic.pic1 {
+  width: 15rem;
+  height: auto;
+  top: 50%;
+  left: 60%;
+}
+.bg-pic.pic2 {
+  width: 7rem;
+  height: auto;
+  top: 26%;
+  left: 25%;
+}
+.bg-pic.pic3 {
+  width: 9rem;
+  height: auto;
+  top: 37%;
+  left: 17%;
+}
+
+.bg-obj.obj1 {
+  width: 7rem;
+  height: auto;
+  top: 25%;
+  left: 60%;
+  opacity: 0.8;
+}
+.bg-obj.obj2 {
+  width: 6.5rem;
+  height: auto;
+  top: 5%;
+  left: 20%;
+  opacity: 0.8;
 }
 
 .content-container {
@@ -100,85 +118,6 @@ p {
   margin: 0 auto;
   background-color: rgb(204, 174, 166);
 }
-
-.papers {
-  width: 100%;
-  z-index: -1;
-}
-
-.backgroud-papers{
-  z-index: -2;
-  position: fixed;
-  width: 100vw;
-  display: flex;
-  top: 40%;
-}
-
-.bg-paper{
-  background-color: #6b5656;
-  opacity: 0.4;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  position: relative;
-  width: 35rem;
-}
-
-.bg-paper-1{
-  transform: rotate(-10deg);
-  left: -5rem;
-  top: -5rem;
-}
-
-.bg-paper-2{
-  transform: rotate(260deg);
-  left: -20rem;
-}
-
-.bg-paper-3{
-  transform: rotate(20deg);
-  left: -40rem;
-  top: -3rem;
-}
-
-.bg-paper-4{
-  transform: rotate(3deg);
-  left: -50rem;
-  top: 8rem;
-}
-
-.bg-paper-5{
-  transform: rotate(-10deg);
-  left: -65rem;
-  top: -5rem;
-}
-
-.bg-paper-6{
-  transform: rotate(15deg);
-  left: -75rem;
-}
-
-.stacked-paper {
-  width: 85%;
-  height: 100vh;
-  position: absolute;
-  background-color: #472d2d;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  margin: 0 auto;
-}
-
-.paper-1 {
-  top: -2rem;
-  left: 3rem;
-  transform: rotate(-3deg);
-}
-
-.paper-2 {
-  top: -3rem;
-  left: -1rem;
-  transform: rotate(-6deg);
-}
-
-
 
 .route-view {
   margin: 0 auto;
@@ -254,7 +193,7 @@ input[type="checkbox"]:checked + label::after {
   align-items: center;
 }
 
-.icon{
+.icon {
   position: relative;
   top: 3px;
   padding: 0 3px;
@@ -265,12 +204,12 @@ input[type="checkbox"]:checked + label::after {
     margin: 5rem auto 0 auto;
     padding: 0;
   }
-  .route-view{
+  .route-view {
     height: 100%;
     width: calc(100% - 4rem);
     padding: 1rem 2rem;
   }
-  .route-intro{
+  .route-intro {
     height: calc(100% - 20rem);
   }
 }
@@ -279,35 +218,14 @@ input[type="checkbox"]:checked + label::after {
 
 } */
 
-
 @font-face {
   font-family: "garam lotus";
   src: url("../fonts/나눔손글씨\ 가람연꽃.ttf");
 }
 
 @font-face {
-  font-family: "RadiantlySignature";
-  src: url("../fonts/RadiantlySignature.otf");
-}
-
-@font-face {
-  font-family: "sophia martini";
-  src: url("../fonts/Sophia\ Martini.otf");
-}
-
-@font-face {
-  font-family: "funflow survivor KR";
-  src: url("../fonts/FUNFLOW\ SURVIVOR_KR.ttf");
-}
-
-@font-face {
-  font-family: "funflow survivor";
-  src: url("../fonts/FUNFLOW\ SURVIVOR.ttf");
-}
-
-@font-face {
-  font-family: "Old London";
-  src: url("../fonts/OldLondon.ttf");
+  font-family: "DungGeunMo";
+  src: url("../fonts/DungGeunMo.ttf");
 }
 
 @font-face {

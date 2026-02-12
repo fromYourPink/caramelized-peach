@@ -25,20 +25,8 @@
   cursor: pointer !important;
 }
 
-/* .logo-item {
-  text-align: center;
-  font-family: "Sophia Martini";
-  font-weight: bold;
-  font-size: 1.5rem;
-} */
-
-/* .logo-item:nth-child(2) {
-  margin-top: -1rem;
-} */
-
 .logo-item {
   text-align: center;
-  /* font-family: "Old London"; */
   font-family: "Times New Roman", Times, serif;
   font-weight: 600;
   font-size: 4rem;
@@ -103,16 +91,16 @@
   .info-section {
     font-size: 0.7rem;
   }
-  .long-item{
+  .long-item {
     position: relative;
-    font-size: .7rem;
+    font-size: 0.7rem;
     top: 2px;
   }
-  .nav-item .unicon svg{
+  .nav-item .unicon svg {
     width: 10px !important;
     height: 10px !important;
   }
-  .nav-item .icon{
+  .nav-item .icon {
     padding: 0;
   }
 }
