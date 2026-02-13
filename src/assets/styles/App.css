@@ -41,6 +41,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  min-height: 360px;
 }
 
 .bg-obj,
@@ -121,6 +122,7 @@ p {
   height: 10rem;
   width: auto;
   padding-bottom: 3rem;
+  z-index: -3;
 }
 
 .nav-section {
@@ -170,6 +172,8 @@ p {
   height: 100%;
   max-width: 1000px;
   position: relative;
+
+  overflow: hidden;
   /* min-height: 100%; */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
@@ -183,18 +187,33 @@ p {
   background-color: rgb(204, 174, 166);
 }
 
-.route-view {
-  margin: 0 auto;
-  overflow-y: auto;
-  background-color: rgb(204, 174, 166);
-  width: calc(100% - 6rem);
-  padding: 1rem 3rem;
-  height: calc(100% - 10rem);
-}
-
 .no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+.w98__client::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+.w98__client::-webkit-scrollbar-track {
+  background: #c0c0c0;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+}
+
+.w98__client::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 2px solid #c0c0c0;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #404040;
+}
+
+.w98__client::-webkit-scrollbar-thumb:active {
+  box-shadow: inset 1px 1px 0 #404040, inset -1px -1px 0 #ffffff;
+}
+
+.w98__client::-webkit-scrollbar-corner {
+  background: #c0c0c0;
 }
 
 input[type="checkbox"] {
@@ -305,14 +324,6 @@ input[type="checkbox"]:checked + label::after {
   .content-container {
     margin: 5rem auto 0 auto;
     padding: 0;
-  }
-  .route-view {
-    height: 100%;
-    width: calc(100% - 4rem);
-    padding: 1rem 2rem;
-  }
-  .route-intro {
-    height: calc(100% - 20rem);
   }
 }
 
