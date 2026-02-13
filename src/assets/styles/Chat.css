@@ -30,7 +30,7 @@
 
 .chat-narration {
   text-align: center;
-  font-size: 0.7rem;
+  font-size: clamp(0.65rem, 0.9vw, 0.8rem);
   font-weight: 300;
   width: fit-content;
   padding: 8px 15px;
@@ -44,8 +44,8 @@
 .chat-profile-img {
   font-size: 0.7rem;
   font-weight: 500;
-  width: 60px;
-  height: 60px;
+  width: clamp(40px, 6vw, 60px);
+  height: clamp(40px, 6vw, 60px);
   align-content: center;
   align-items: center;
   text-align: center;
@@ -78,7 +78,7 @@
 } */
 
 .chat-profile-name {
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
   font-weight: 500;
   width: 100%;
 }
@@ -100,7 +100,7 @@
   margin-top: 0.3rem;
   padding: 0.3rem 0.4rem;
   border-radius: 0.5rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
   font-weight: 500;
 }
 
@@ -110,11 +110,4 @@
 
 .martin .chat-texts {
   background-color: #fde6cc;
-}
-
-@media (max-width: 768px) {
-  .chat-profile-img {
-    width: 45px;
-    height: 45px;
-  }
 }

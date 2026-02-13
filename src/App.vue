@@ -43,14 +43,10 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
 import WindowFrame from "./components/WindowFrame.vue"
 
 export default {
   components: {
-    Header,
-    Footer,
     WindowFrame
   },
   computed: {

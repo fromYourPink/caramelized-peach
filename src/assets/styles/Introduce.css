@@ -1,9 +1,9 @@
 .subtitle-section {
-  font-size: 2.3rem;
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
+  min-height: clamp(4rem, 8vh, 6rem);
   font-family: "Pretendard";
   font-weight: 700;
   word-break: keep-all;
-  min-height: 6rem;
   color: rgb(71, 45, 45);
 }
 
@@ -56,8 +56,8 @@
 }
 
 .profile-pic img {
-  width: 200px;
-  height: 200px;
+  width: clamp(120px, 18vw, 200px);
+  height: clamp(120px, 18vw, 200px);
   border-radius: 50%;
   overflow: hidden;
 }
@@ -72,7 +72,7 @@
 .profile-text {
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
+  margin-left: clamp(12px, 3vw, 30px);
   flex-grow: 1;
   word-break: keep-all;
   color: #472d2d;
@@ -99,22 +99,21 @@
 
 .eng-name.martin {
   font-family: "RadiantlySignature";
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: bold;
   /* color: #ffc000; */
   background: linear-gradient(
     to top,
     rgba(255, 192, 0, 0.5) 50%,
     transparent 50%
-  ) ;
+  );
   background-repeat: no-repeat;
   background-size: 100% 90%; /* 배경 크기 조정 */
   background-position: 0 35%;
 }
 
-
 .eng-name.alley {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-family: "garam lotus";
   font-weight: bold;
   /* color: #ff968f; */
@@ -144,10 +143,9 @@
 }
 
 .desc {
-  font-size: 0.9rem;
   width: calc(100% - 30px);
-
-  line-height: 1.2rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  line-height: clamp(1.1rem, 1.6vw, 1.3rem);
 }
 
 .desc.alley {
@@ -157,25 +155,19 @@
 .mosaic {
   background-image: radial-gradient(currentColor 1px, transparent 1px);
   background-size: 2.5px 2.5px; /* 점 간격 조정 */
-  color: rgba(0,0,0,.8); /* 점 색상 */
-  width: 1rem; /* 영역 너비 */
-  height: 1rem; /* 영역 높이 */
+  color: rgba(0, 0, 0, 0.8); /* 점 색상 */
+  width: clamp(0.8rem, 1.2vw, 1rem);
+  height: clamp(0.8rem, 1.2vw, 1rem);
   display: inline-block;
   position: relative;
   text-align: center;
-  top: .2rem;
+  top: 0.2rem;
 }
 
 /* @media */
 @media (max-width: 900px) {
   .profile.alley {
     flex-direction: row-reverse;
-  }
-
-  .profile-pic img {
-    width: 150px;
-    height: 150px;
-    margin-top: 2rem;
   }
 
   .name-section.alley {
@@ -208,10 +200,6 @@
 }
 
 @media (max-width: 768px) {
-  .subtitle-section{
-    font-size: 2.2rem;
-  }
-
   .profile {
     flex-direction: column;
     align-items: center;
@@ -233,15 +221,8 @@
 }
 
 @media (max-width: 500px) {
-  .subtitle-section{
-    font-size: 1.8rem;
-  }
-
   .eng-name.martin {
     font-size: 1rem;
     margin-bottom: 0.3rem;
-  }
-  .eng-name.alley {
-    font-size: 2rem;
   }
 }

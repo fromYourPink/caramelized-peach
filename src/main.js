@@ -14,6 +14,10 @@ Vue.prototype.$openSite = function (url) {
   window.open(url, "_blank");
 };
 
+Vue.prototype.$goHome = function () {
+  router.push("/");
+};
+
 new Vue({
   store,
   router,
