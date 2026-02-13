@@ -9,26 +9,15 @@
       {{ getTodayDate() }}
     </div>
     <div class="nav">
-      <router-link
-        to="/introduce"
-        class="nav-item"
-        :class="isRoute('/introduce')"
-        >Introduce</router-link
-      >
-      <router-link to="/gallary" class="nav-item" :class="isRoute('/gallary')"
-        >Gallary</router-link
-      >
-      <router-link to="/archive" class="nav-item" :class="isRoute('/archive')"
-        >Archive</router-link
-      >
-      <span
-        class="nav-item long-item"
-        @click="
-          openSite(
-            'https://amused-letter-39e.notion.site/Caramelized-Peach-1057274502d0809689d2d2ad0f56400f?pvs=74'
-          )
-        "
-        >Develop-Note<unicon name="link" width="15" height="15" class="icon" />
+      <router-link to="/introduce" class="nav-item" :class="isRoute('/introduce')">Introduce</router-link>
+      <router-link to="/gallary" class="nav-item" :class="isRoute('/gallary')">Gallary</router-link>
+      <router-link to="/archive" class="nav-item" :class="isRoute('/archive')">Archive</router-link>
+      <span class="nav-item long-item" @click="
+        $openSite(
+          'https://amused-letter-39e.notion.site/Caramelized-Peach-1057274502d0809689d2d2ad0f56400f?pvs=74'
+        )
+        ">Develop-Note
+        <unicon name="link" width="15" height="15" class="icon" />
       </span>
     </div>
   </div>
@@ -73,9 +62,6 @@ export default {
 
       // "DD-MM-YYYY (요일)" 형식으로 반환
       return `${weekday} ${day}-${month}-${year} `;
-    },
-    openSite(url) {
-      window.open(url, "_blank");
     },
   },
 };

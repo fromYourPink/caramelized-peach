@@ -28,20 +28,6 @@ p {
   overflow-y: hidden;
 }
 
-@keyframes gradientWave {
-  0% {
-    background-position: 30% 50%;
-  }
-
-  50% {
-    background-position: 70% 50%;
-  }
-
-  100% {
-    background-position: 30% 50%;
-  }
-}
-
 .main-bg {
   position: absolute;
   top: 0;
@@ -94,6 +80,42 @@ p {
   top: 5%;
   left: 20%;
   opacity: 0.8;
+}
+
+.nav-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: max-content;
+  height: auto;
+}
+
+.main-nav {
+  font-family: "DungGeunMo";
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  gap: 1rem;
+}
+
+.main-nav-item {
+  flex: 1;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+  white-space: nowrap;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-img {
+  height: 3rem;
+  width: auto;
 }
 
 .content-container {
@@ -199,7 +221,45 @@ input[type="checkbox"]:checked + label::after {
   padding: 0 3px;
 }
 
-@media (max-width: 768px) {
+/* @media */
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1200px) {
+  .site-title {
+    height: 9rem;
+  }
+  .main-nav {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-nav-item {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .site-title {
+    height: 8rem;
+  }
+  .main-nav {
+    padding: 1rem 0.7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-title {
+    height: 6rem;
+  }
+  .main-nav {
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+  .nav-img {
+    height: 2.5rem;
+  }
   .content-container {
     margin: 5rem auto 0 auto;
     padding: 0;
@@ -214,10 +274,7 @@ input[type="checkbox"]:checked + label::after {
   }
 }
 
-/* @media (max-width: 500px){
-
-} */
-
+/* font */
 @font-face {
   font-family: "garam lotus";
   src: url("../fonts/나눔손글씨\ 가람연꽃.ttf");
