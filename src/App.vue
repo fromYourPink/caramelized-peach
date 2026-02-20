@@ -1,9 +1,22 @@
 <template>
   <div id="app" class="no-select">
     <div class="main-bg no-scrollbar">
-      <img class="bg-pic pic1" src="@/assets/imgs/background/pic1.png" />
+      <!-- <img class="bg-pic pic1" src="@/assets/imgs/background/pic1.png" />
       <img class="bg-pic pic3" src="@/assets/imgs/background/pic3.png" />
-      <img class="bg-pic pic2" src="@/assets/imgs/background/pic2.png" />
+      <img class="bg-pic pic2" src="@/assets/imgs/background/pic2.png" /> -->
+
+      <WindowImage
+      :src="pic1"
+      width="clamp(200px, 20vw, 480px)"
+      :windowStyle="{ position: 'absolute', top: '45vh', left: '55vw'}"/>
+      <WindowImage
+      :src="pic3"
+      width="clamp(150px, 13vw, 380px)"
+      :windowStyle="{ position: 'absolute', top: '40vh', left: '30vw'}"/>
+      <WindowImage
+      :src="pic2"
+      width="clamp(120px, 10vw, 200px)"
+      :windowStyle="{ position: 'absolute', top: '25vh', left: '38vw'}"/>
       <img class="bg-obj obj1" src="@/assets/imgs/background/object1.png" />
       <img class="bg-obj obj2" src="@/assets/imgs/background/object2.png" />
     </div>
@@ -44,10 +57,15 @@
 
 <script>
 import WindowFrame from "./components/WindowFrame.vue"
+import WindowImage from "./components/WindowImage.vue"
+import pic1 from "@/assets/imgs/background/_pic1.jpg";
+import pic2 from "@/assets/imgs/background/_pic2.jpg";
+import pic3 from "@/assets/imgs/background/_pic3.jpg";
 
 export default {
   components: {
-    WindowFrame
+    WindowFrame,
+    WindowImage
   },
   computed: {
     isRoute() {
@@ -55,7 +73,11 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      pic1,
+      pic2,
+      pic3
+    };
   },
 };
 </script>

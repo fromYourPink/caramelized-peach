@@ -8,10 +8,9 @@
         <div class="w98__title">
           <slot name="title">{{ computedTitle }}</slot>
         </div>
-
       </div>
 
-      <div v-if="controlBtn" class="w98__controls">
+      <div class="w98__controls">
         <button class="w98__btn" type="button" aria-label="Minimize">_</button>
         <button class="w98__btn" type="button" aria-label="Maximize">□</button>
         <button class="w98__btn" type="button" aria-label="Close" @click="$goHome()">×</button>
@@ -24,47 +23,33 @@
       </button>
     </nav>
 
-
-    <div class="w98__client" :class="[scroll ? 'w98__client--scroll' : '', bodyClass]">
-      <slot></slot>
+    <div class="w98__client" :class="scroll ? 'w98__client--scroll' : ''">
+      <slot />
     </div>
-
   </section>
 </template>
 
 <script>
 export default {
-  name: "Win98Window",
   props: {
     title: { type: String, default: "" },
-    titleMode: { type: String, default: "manual" },
+    titleMode: { type: String, default: "route" },
     showTitlebar: { type: Boolean, default: true },
     scroll: { type: Boolean, default: true },
     menu: { type: Array, default: () => [] },
-    bodyClass: { type: [String, Array, Object], default: "" },
-    mode: { type: String, default: "route" },       // route | decor
-    anchor: { type: String, default: "right" },     // center | right
-    offsetX: { type: String, default: "3vw" },       // 우측으로 밀리는 정도
-    offsetY: { type: String, default: "4vh" },
-    controlBtn: { type: Boolean, default: true }
-  }
-  ,
+
+    // route 전용 위치/크기(원하시면 여기만 조정하면 됨)
+    width: { type: String, default: "80vw" },
+    height: { type: String, default: "90vh" },
+    offsetX: { type: String, default: "3vw" },
+    offsetY: { type: String, default: "4vh" }
+  },
   computed: {
     frameStyle() {
-      if (this.mode === "route") {
-        return {
-          width: "80vw",
-          height: "90vh",
-          marginLeft: "auto",
-          marginRight: this.offsetX,
-          marginTop: this.offsetY
-        };
-      }
       return {
-        width: `min(${this.maxWidth}, ${this.width})`,
-        height: `min(${this.maxHeight}, ${this.height})`,
-        minWidth: this.minWidth,
-        minHeight: this.minHeight,
+        width: this.width,
+        height: this.height,
+        marginLeft: "auto",
         marginRight: this.offsetX,
         marginTop: this.offsetY
       };

@@ -28,9 +28,16 @@
   position: relative;
 }
 
+.w98--decor .w98__client {
+  flex: initial; /* flex: 1 무력화 */
+  min-height: auto; /* min-height: 0 대신 */
+  overflow: hidden; /* scroll=false일 때도 안전하게 */
+  padding: 0; /* 이미지 꽉 채우고 싶으면 */
+}
+
 /* 타이틀바 */
 .w98__titlebar {
-  height: clamp(26px, 4vh, 30px);
+  height: clamp(20px, 2.5vh, 26px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,6 +140,12 @@
   border-left: 2px solid #808080;
   border-right: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
+}
+
+.w98__client--no-pad {
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
 }
 
 .w98__client--scroll {
