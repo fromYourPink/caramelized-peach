@@ -58,9 +58,9 @@
 <script>
 import WindowFrame from "./components/WindowFrame.vue"
 import WindowImage from "./components/WindowImage.vue"
-import pic1 from "@/assets/imgs/background/_pic1.jpg";
-import pic2 from "@/assets/imgs/background/_pic2.jpg";
-import pic3 from "@/assets/imgs/background/_pic3.jpg";
+import pic1 from "@/assets/imgs/background/pic1.jpg";
+import pic2 from "@/assets/imgs/background/pic2.jpg";
+import pic3 from "@/assets/imgs/background/pic3.jpg";
 
 export default {
   components: {
